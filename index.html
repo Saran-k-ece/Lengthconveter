@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h3>celsius to fahrenheit</h3>
+        <div class="input">
+            <input type=text  id="input" placeholder="Enter the celcius">
+        </div>
+        <div class="btn">
+            <button type="submit" onclick="convert()">Convert to Fahrenheit</button>
+        </div>
+        <div id="result">
+
+        </div>
+        
+    </div>
+    <script>
+        function convert()
+        {
+                 let celcius=Number(document.getElementById("input").value)
+                 let Farhrenheit=(celcius*9/5)+32
+                 let result=document.getElementById("result")
+                 result.innerHTML= Farhrenheit.toFixed(2) +"F"
+        }
+                 
+
+    </script>
+</body>
+</html>
